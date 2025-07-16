@@ -34,7 +34,7 @@ export const Footer = () => {
                 <nav>
                 <ul className="flex justify-center items-center space-x-6">
                         <li>
-                            <Link href="https://t.me/your_username" target="_blank" rel="noopener noreferrer"
+                            <Link href="https://t.me/Kristina_Sokova" target="_blank" rel="noopener noreferrer"
                                   className="flex items-center space-x-1 hover:text-blue-500 transition">
                                 <TelegramIcon/>
                             </Link>
