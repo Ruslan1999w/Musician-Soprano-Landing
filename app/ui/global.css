@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #000000;
+
+  font-family: "Kumbh Sans", "Helvetica Neue", Arial, system-ui, sans-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 1.6;
+  font-size: 1.125rem;
+}
+
+
+nav a {
+  font-size: 1.125rem;
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  text-transform: none;
+  color: #000000;
+  letter-spacing: 0em;
+  border: none;
+  font-weight: 400;
+  position: relative;
+  text-decoration: none;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "EB Garamond", serif;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+article {
+  display: block;
+  unicode-bidi: isolate;
+}
+p {
+  margin: 2rem;
+}
+strong, b {
+  font-weight: 700;
+}

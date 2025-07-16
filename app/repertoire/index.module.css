@@ -1,0 +1,55 @@
+.wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    color: white;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    gap: 100px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.header {
+    font-size: 70px;
+    line-height: .928em;
+}
+.roles {
+    color: #ffffff;
+    text-align: center;
+    font-family: Abril Fatface;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    line-height: 1em;
+}
+.section_photo {
+    width: 50%;
+}
+.section_photo img {
+    height: 100%;
+    width: 100%;
+}
+.porfolio {
+    width: 50%;
+}
+.porfolio_container {
+    margin-bottom: 50px;
+}
+
+.roles_container {
+    display: flex;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+.text {
+    margin-right: 3rem;
+}
+.text p {
+    margin: 1rem;
+    white-space: nowrap;
+}

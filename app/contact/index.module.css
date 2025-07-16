@@ -1,0 +1,41 @@
+.wrapper {
+    margin: 0 auto 150px;
+    padding: 7rem 7rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.header {
+    font-family: "EB Garamond", serif;
+    line-height: 1;
+    font-weight: 500;
+    text-align: center;
+    font-size: 4rem;
+    width: 100%;
+}
+
+.creator {
+    font-size: 1.125rem;
+    line-height: 1;
+    font-weight: 400;
+    align-self: flex-start;
+    margin-top: 5px;
+
+}
+.contacts {
+    font-size: 1.125rem;
+
+}
+.contacts p {
+    margin: 0;
+}
+.section_container {
+    margin-top: 100px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper h2 {
+    margin: 0;
+}
