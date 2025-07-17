@@ -43,8 +43,8 @@ export const Navigation = () => {
                 <nav className={`hidden md:flex space-x-8 uppercase text-sm tracking-wider ${styles.header_gap}`}>
                     <Link href="/#article" className="hover:text-gray-300 transition">About</Link>
                     <Link href="/repertoire" className="hover:text-gray-300 transition" scroll={false}>Repertoire</Link>
-                    <Link href="/contact" className="hover:text-gray-300 transition" scroll={false}>Contact</Link>
                     <Link href="/media" className="hover:text-gray-300 transition" scroll={false}>Media</Link>
+                    <Link href="/contact" className="hover:text-gray-300 transition" scroll={false}>Contact</Link>
                 </nav>
 
 

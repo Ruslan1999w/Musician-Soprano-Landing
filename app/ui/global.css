@@ -69,3 +69,9 @@ p {
 strong, b {
   font-weight: 700;
 }
+
+@layer components {
+  .custom-paragraphs p {
+    @apply m-0;
+  }
+}
