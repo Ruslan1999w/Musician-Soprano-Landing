@@ -1,9 +1,11 @@
 interface YouTubeIconProps {
-    className?: string
+    className?: string,
+    width?: string,
+    height?: string
 }
 
-export const YouTubeIcon = ({ className }: YouTubeIconProps) => (
-    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0,0,256,256" className={className}>
+export const YouTubeIcon = ({ className, width = '24', height = '24' }: YouTubeIconProps) => (
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width={width} height={height} viewBox="0,0,256,256" className={className}>
         <g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt"
            strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none"
            fontWeight="none" fontSize="none" textAnchor="none">

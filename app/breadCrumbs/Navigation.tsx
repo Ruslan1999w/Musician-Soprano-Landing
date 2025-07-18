@@ -3,6 +3,9 @@
 import styles from "@/app/header/index.module.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import {TelegramIcon} from "@/app/icons/TelegramIcon";
+import {InstagramIcon} from "@/app/icons/InstagramIcon";
+import {YouTubeIcon} from "@/app/icons/YouTube";
 
 
 export const Navigation = () => {
@@ -53,6 +56,29 @@ export const Navigation = () => {
                         </li>
                         <li className='text-center mt-4 mb-4 ml-0 mr-0'>
                             <Link href="/contact" className="hover:text-gray-300 transition" scroll={false}>Contact</Link>
+                        </li>
+                    </ul>
+                    <ul className='flex gap-12 overflow-hidden justify-center mt-12'>
+                        <li>
+                            <Link href="https://t.me/Kristina_Sokova" target="_blank" rel="noopener noreferrer"
+                                  className="flex items-center space-x-1 hover:text-blue-500 transition">
+                                <TelegramIcon width='30' height='30'/>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="https://www.instagram.com/kristina_sokova?igsh=MWE1OTl4bzV4M2ZjbQ%3D%3D&utm_source=qr"
+                                target="_blank" rel="noopener noreferrer"
+                                className="flex items-center space-x-1 hover:text-pink-600 transition">
+                                <InstagramIcon width='30' height='30'/>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="https://youtube.com/@kristinasokova3797?si=roZsYCsYrhHJazF4" target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex items-center space-x-1 hover:text-red-600 transition">
+                                <YouTubeIcon width='30' height='30'/>
+                            </Link>
                         </li>
                     </ul>
                 </div>
