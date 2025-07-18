@@ -1,0 +1,43 @@
+.current_menu_item a {
+    position: relative;
+    display: block; /* или inline-block */
+}
+
+.current_menu_item a::after {
+    content: "•";
+    height: 15px;
+    font-size: 1.875rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.scrolled {
+    padding: 1rem 3rem;
+}
+
+.not_scrolled {
+    padding: 2.5rem 3rem 3rem;
+}
+
+.logo {
+    transition: opacity 150ms ease-in-out;
+    border: none;
+    display: block;
+    color: #000000;
+    font-family: "EB Garamond", serif;
+    font-weight: 700;
+    font-size: 2.1875rem;
+    letter-spacing: 0.05em;
+    line-height: 30px;
+    text-align: center;
+    text-transform: none;
+    text-decoration: none;
+    max-width: 300px;
+}
+
+.header_gap {
+    gap: clamp(2rem, 5vw, 8rem);
+}

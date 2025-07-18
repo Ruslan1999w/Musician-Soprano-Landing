@@ -1,16 +1,19 @@
 "use client";
 
-import styles from "@/app/header/index.module.css";
+import styles from "./styles.module.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import {TelegramIcon} from "@/app/icons/TelegramIcon";
 import {InstagramIcon} from "@/app/icons/InstagramIcon";
 import {YouTubeIcon} from "@/app/icons/YouTube";
+import {usePathname} from "next/navigation";
 
 
 export const Navigation = () => {
     const [scrolled, setScrolled] = useState(false);
     const [openNavMobile, setOpenNavMobile] = useState(false);
+    const pathname = usePathname();
+    console.log('pathName ', pathname)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -39,22 +42,22 @@ export const Navigation = () => {
                             d="m0 88.591 38.926-38.927L0 10.738 11.409 0l38.927 38.926L88.591 0 100 10.738 61.074 49.664 100
                             88.591 88.591 99.329 49.664 61.074 10.738 100z"
                             fill="currentColor"
-                            fill-rule="nonzero"
+                            fillRule="nonzero"
                         />
                     </svg>
                 </button>
                 <div className='w-full m-auto overflow-auto'>
                     <ul className='flex-col flex gap-8 overflow-hidden justify-between m-0' onClick={toggleNavMobile}>
-                        <li className='text-center mt-4 mb-4 ml-0 mr-0'>
+                        <li className={`${pathname === '/' && styles.current_menu_item} text-center mt-4 mb-4 ml-0 mr-0`}>
                             <Link href="/#article" className="hover:text-gray-300 transition">About</Link>
                         </li>
-                        <li className='text-center mt-4 mb-4 ml-0 mr-0'>
+                        <li className={`${pathname === '/repertoire' && styles.current_menu_item} text-center mt-4 mb-4 ml-0 mr-0`}>
                             <Link href="/repertoire" className="hover:text-gray-300 transition" scroll={false}>Repertoire</Link>
                         </li>
-                        <li className='text-center mt-4 mb-4 ml-0 mr-0'>
+                        <li className={`${pathname === '/media' && styles.current_menu_item} text-center mt-4 mb-4 ml-0 mr-0`}>
                             <Link href="/media" className="hover:text-gray-300 transition" scroll={false}>Media</Link>
                         </li>
-                        <li className='text-center mt-4 mb-4 ml-0 mr-0'>
+                        <li className={`${pathname === '/contact' && styles.current_menu_item} text-center mt-4 mb-4 ml-0 mr-0`}>
                             <Link href="/contact" className="hover:text-gray-300 transition" scroll={false}>Contact</Link>
                         </li>
                     </ul>
