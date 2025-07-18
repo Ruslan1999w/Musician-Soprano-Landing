@@ -5,7 +5,7 @@ import backgroundImage from "@/public/photo_2025-06-16_16-42-15.jpg";
 
 export const Article = () => {
   return(
-      <section>o
+      <section className={`${styles.current_logo}`}>
           <div className='flex relative flex-col w-full md:flex-row text-white mt-[150px] mb-[150px] gap-[60px]' id={'article'}>
               <div>
                   <Image
