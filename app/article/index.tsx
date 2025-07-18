@@ -32,7 +32,7 @@ export const Article = () => {
                   <p>
                       Her operatic debut took place in 2024 in the title role of <i>Lulu</i> by Alban Berg at the
                       Hochschule für Musik Weimar, conducted by Noah Damm.
-                      She also appeared as Adele in Johann Strauss’s Die <i>Fledermaus</i> at the Landestheater Detmold,
+                      She also appeared as Adele in Johann Strauss’s <i>Die Fledermaus</i> at the Landestheater Detmold,
                       under the baton of Prof. Fabio Vettraino.
                       In addition, she performed the role of Blonde in Mozart’s <i>Die Entführung aus dem
                       Serail</i> with the OWL Kammerphilharmonie Minden, conducted by Naoko Grünberg-Sakai.
