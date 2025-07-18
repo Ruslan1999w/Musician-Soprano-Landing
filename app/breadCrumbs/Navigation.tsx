@@ -13,7 +13,6 @@ export const Navigation = () => {
     const [scrolled, setScrolled] = useState(false);
     const [openNavMobile, setOpenNavMobile] = useState(false);
     const pathname = usePathname();
-    console.log('pathName ', pathname)
 
     useEffect(() => {
         const handleScroll = () => {
