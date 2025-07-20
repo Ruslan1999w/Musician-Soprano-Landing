@@ -26,21 +26,21 @@ export default function Media() {
                 {/*        className="rounded-lg shadow-md hover:shadow-lg transition-shadow w-full max-w-xl h-[400px]"*/}
                 {/*    />*/}
                 {/*</a>*/}
+                <div className="cursor-pointer relative">
+                    <a
+                        href="https://www.youtube.com/embed/UAwLgYIWD0I?autoplay=1"
+                        data-fancybox
+                    >
+                        <PlayIcon
+                            className='absolute w-32 h-32 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 '/>
 
-                <a
-                    href="https://www.youtube.com/embed/UAwLgYIWD0I?autoplay=1"
-                    data-fancybox
-                    className="cursor-pointer relative"
-                >
-                    <PlayIcon
-                        className='absolute w-32 h-32 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 '/>
-
-                    <Image
-                        src={mediaBackgroundSec}
-                        alt="Посмотреть видео"
-                        className={`${styles['page-header__image']} aspect-square max-h-[900px]`}
-                    />
-                </a>
+                        <Image
+                            src={mediaBackgroundSec}
+                            alt="Посмотреть видео"
+                            className={`${styles['page-header__image']} aspect-square max-h-[900px]`}
+                        />
+                    </a>
+                </div>
             </div>
         </section>
     )
