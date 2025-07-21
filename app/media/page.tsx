@@ -2,46 +2,53 @@
 
 import Image from 'next/image';
 
+import galleryImageOne from '@/public/1.jpg';
+import galleryImageTwo from '@/public/2.jpg';
+import galleryImageThree from '@/public/3.jpg';
+import galleryImageFour from '@/public/4.jpg';
+import galleryImageFive from '@/public/5.jpeg';
+
 import styles from './index.module.css';
-import useFancybox from "@/app/media/hooks/useFancybox";
-import mediaBackgroundSec from '@/public/Dokumentname_farbe_8.jpg'
-import PlayIcon from "@/app/media/Play";
+
+const galleryImage = [
+    {
+        img: galleryImageOne,
+        aspectRatio: '1:1'
+    },
+    {
+        img: galleryImageTwo,
+        aspectRatio: '3:2'
+    },
+    {
+        img: galleryImageThree,
+        aspectRatio: '17:12'
+    },
+    {
+        img: galleryImageFour,
+        aspectRatio: '29:20'
+    },
+    {
+        img: galleryImageFive,
+        aspectRatio: '3:2'
+    },
+];
 
 export default function Media() {
-    const [fancyboxRef] = useFancybox({
-        // Your custom options
-    });
+    const galleryHtml = galleryImage.map((image) =>
+        <div className='max-h-[500px] max-w-[800px] h-auto w-auto overflow-hidden'>
+            <Image
+                alt='Repertoire image'
+                src={image.img}
+                className={`object-cover`}
+            />
+        </div>
+    );
 
     return(
-        <section className={styles.current_logo}>
-            <div className='w-full mt-28 mb-28' ref={fancyboxRef}>
-                {/*<a*/}
-                {/*    href="https://www.youtube.com/embed/UAwLgYIWD0I?autoplay=1"*/}
-                {/*    data-fancybox*/}
-                {/*    className="cursor-pointer block"*/}
-                {/*>*/}
-                {/*    <img*/}
-                {/*        src={mediaBackground.src} // Миниатюра YouTube*/}
-                {/*        alt="Посмотреть видео"*/}
-                {/*        className="rounded-lg shadow-md hover:shadow-lg transition-shadow w-full max-w-xl h-[400px]"*/}
-                {/*    />*/}
-                {/*</a>*/}
-                <div className="cursor-pointer relative">
-                    <a
-                        href="https://www.youtube.com/embed/UAwLgYIWD0I?autoplay=1"
-                        data-fancybox
-                    >
-                        <PlayIcon
-                            className='absolute w-32 h-32 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 '/>
-
-                        <Image
-                            src={mediaBackgroundSec}
-                            alt="Посмотреть видео"
-                            className={`${styles['page-header__image']} aspect-square max-h-[900px]`}
-                        />
-                    </a>
+            <div className='w-full mt-28 mb-28 pl-4 pr-4'>
+                <div className='flex flex-wrap md:flex-row flex-col gap-20'>
+                    {galleryHtml}
                 </div>
             </div>
-        </section>
     )
 }
