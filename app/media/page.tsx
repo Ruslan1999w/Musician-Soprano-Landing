@@ -46,7 +46,7 @@ export default function Media() {
 
     return(
             <div className='w-full mt-28 mb-28 pl-4 pr-4'>
-                <div className='flex flex-wrap md:flex-row flex-col gap-20'>
+                <div className='flex flex-wrap md:flex-row flex-col gap-20 justify-center'>
                     {galleryHtml}
                 </div>
             </div>
