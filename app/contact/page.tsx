@@ -3,7 +3,7 @@ import styles from './index.module.css';
 export default function ContactPage() {
 
     return(
-        <article className={styles.current_logo}>
+        <article>
             <div className={styles.wrapper}>
                 <div className={styles.header}>Contacts</div>
                 <div className={styles.section_container}>

@@ -7,7 +7,7 @@ export default function () {
     const textBox = 'm-4 whitespace-nowrap flex flex-col m-4 gap-4';
 
     return(
-        <article className={styles.current_logo}>
+        <article>
             <div className={styles.wrapper}>
                 <div className={`${styles.section_photo} md:block hidden `}>
                     <Image

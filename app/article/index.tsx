@@ -7,7 +7,7 @@ import {LatestVideo} from "@/app/latestVideo/LatestVideo";
 export const Article = () => {
   return(
       <>
-          <section className={`${styles.current_logo}`}>
+          <section>
               <div className='flex relative flex-col w-full md:flex-row text-white mt-[150px] mb-[150px] gap-[60px]' id={'article'}>
                   <div>
                       <Image
