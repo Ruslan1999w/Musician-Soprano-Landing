@@ -13,6 +13,7 @@ import galleryImageEight from '@/public/8.jpeg';
 import galleryImageNine from '@/public/9.jpeg';
 import galleryImageTen from '@/public/10.jpeg';
 import galleryImageEleven from '@/public/11.jpeg';
+import galleryImageTwelve from '@/public/12.jpeg';
 
 import styles from './index.module.css';
 
@@ -50,6 +51,10 @@ const galleryImage = [
         aspectRatio: '3:2'
     },
     {
+        img: galleryImageNine,
+        aspectRatio: '3:2'
+    },
+    {
         img: galleryImageTen,
         aspectRatio: '3:2'
     },
@@ -57,11 +62,15 @@ const galleryImage = [
         img: galleryImageEleven,
         aspectRatio: '3:2'
     },
+    {
+        img: galleryImageTwelve,
+        aspectRatio: '3:2'
+    },
 ];
 
 export default function Media() {
-    const galleryHtml = galleryImage.map((image) =>
-        <div className='max-h-[1000px] max-w-[500px] h-auto w-auto overflow-hidden rounded-lg'>
+    const galleryHtml = galleryImage.map((image, index) =>
+        <div className='max-h-[1000px] max-w-[500px] h-auto w-auto overflow-hidden rounded-lg' key={index}>
             <Image
                 alt='Repertoire image'
                 src={image.img}
