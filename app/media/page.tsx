@@ -22,6 +22,8 @@ import galleryImageNine from "@/public/9.jpeg";
 import galleryImageTen from "@/public/10.jpeg";
 import galleryImageEleven from "@/public/11.jpeg";
 import galleryImageTwelve from "@/public/12.jpeg";
+import galleryImageThirteen from "@/public/13.jpg";
+import galleryImageFourTeen from "@/public/14.jpeg";
 
 const galleryImage = [
     { img: galleryImageOne, aspectRatio: "1:1" },
@@ -36,6 +38,8 @@ const galleryImage = [
     { img: galleryImageTen, aspectRatio: "3:2" },
     { img: galleryImageEleven, aspectRatio: "3:2" },
     { img: galleryImageTwelve, aspectRatio: "3:2" },
+    { img: galleryImageThirteen, aspectRatio: "3:2" },
+    { img: galleryImageFourTeen, aspectRatio: "3:2" },
 ];
 
 export default function Media() {
