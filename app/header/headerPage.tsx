@@ -5,11 +5,12 @@ import Image from "next/image";
 import { useRef, useLayoutEffect } from "react";
 import {StaticImageData} from "next/image";
 
-import styles from './index.module.css';
-import backgroundImage from "@/public/Dokumentname_farbe_75.jpg";
-import contactBackground from '@/public/photo_2025-05-19_21-16-02.jpg';
+import backgroundImage from "@/public/mediaHeader.jpg";
+import contactBackground from '@/public/mainHeader.jpg';
 import repertoireBackground from '@/public/IMG_0242.jpg'
 import mediaBackground from '@/public/Dokumentname_farbe_88.jpg'
+
+import styles from './index.module.css';
 
 type PageData = {
     title: string;
