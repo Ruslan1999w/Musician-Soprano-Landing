@@ -19,7 +19,7 @@ export const Footer = () => {
                         <div className='flex justify-center items-center w-full md:w-1/2'>
                             <form className='relative w-full flex'>
                                 <input className={`${styles.input} w-full `} type="email" placeholder='Enter email address here...'/>
-                                <button className={styles.btn}>
+                                <button className={styles.btn} type='submit'>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.2 11.4" fill="currentColor" className='w-8 h-3'>
                                         <path
                                             d="M32.1 5.4c0-.1-.1-.2-.2-.3L27.2.3c-.2-.2-.5-.3-.7-.3-.3 0-.5.1-.6.3-.2.2-.3.4-.3.7 0 .3.1.5.3.7L29 4.8H1c-.5 0-1 .4-1 1s.4 1 1 1h28l-3.1 3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3.3 0 .5-.1.6-.3l4.7-4.7s0-.1.1-.1v-.1c.2-.3.2-.7.1-.9z"/>

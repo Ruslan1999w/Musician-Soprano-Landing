@@ -47,6 +47,11 @@ export default function () {
                                 <p>Lulu</p>
                                 <p>Lulu</p>
                             </div>
+                            <div className={textBox}>
+                                <p>Giselher Klebe</p>
+                                <p>Das Mädchen aus Domréry</p>
+                                <p>Agnes Sorel</p>
+                            </div>
 
                         </div>
                     </div>

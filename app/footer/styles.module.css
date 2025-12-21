@@ -30,6 +30,11 @@
     letter-spacing: 0.075em;
     padding: 0.5rem 0 1rem;
 }
+input:focus {
+    outline: none !important;
+    border-bottom: 1px solid #000000;
+    box-shadow: none;
+}
 .btn {
     color: #000000;
     position: absolute;
