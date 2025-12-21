@@ -13,7 +13,7 @@ export const Footer = () => {
             <div className={`flex items-center w-full pt-28 pb-28 ${styles.email}`}>
                     <div className='flex justify-between w-full flex-wrap pl-14 pr-14 gap-8 flex-1'>
                         <div>
-                            <div className={styles.title}>Newsletter Sign Up</div>
+                            <div>Newsletter Sign Up</div>
                             <h2 className='mt-3.5'>For latest news & events</h2>
                         </div>
                         <div className='flex justify-center items-center w-full md:w-1/2'>
