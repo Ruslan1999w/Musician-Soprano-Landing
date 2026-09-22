@@ -42,6 +42,8 @@ const galleryImage = [
     { img: galleryImageFourTeen, aspectRatio: "3:2" },
 ];
 
+const thumbUrl = (src: string) => `/_next/image?url=${encodeURIComponent(src)}&w=256&q=60`;
+
 export default function Media() {
     const lightGallerySettings = {
         plugins: [lgZoom, lgThumbnail],
@@ -51,6 +53,7 @@ export default function Media() {
         zoom: true,
         actualSize: false,
         autoplay: false,
+        exThumbImage: 'data-thumb',
     };
 
     return (
@@ -62,6 +65,7 @@ export default function Media() {
                 {galleryImage.map((image, index) => (
                     <a
                         href={image.img.src}
+                        data-thumb={thumbUrl(image.img.src)}
                         key={index}
                         className="block max-h-[1000px] max-w-[500px] h-auto w-auto overflow-hidden rounded-lg mb-10"
                         style={{ aspectRatio: image.aspectRatio }}
