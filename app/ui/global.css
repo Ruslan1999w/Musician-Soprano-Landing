@@ -27,18 +27,52 @@ input[type='number']::-webkit-outer-spin-button {
 html {
   font-size: 16px;
 }
+
+/* Soft, blended palette taken from the photos: dusty blue, smoky slate, powder light */
+:root {
+  --bg-base: #1f2833;
+  --bg-deep: #19212b;
+  --smoke-blue: #3e5268;
+  --dusty-blue: #6a7f98;
+  --powder: #b9c7d6;
+  --mist: #dde4ec;
+  --text: #eef1f5;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background: #000000;
+  position: relative;
+  background: var(--bg-base);
 
   font-family: "Kumbh Sans", "Helvetica Neue", Arial, system-ui, sans-serif;
   font-weight: 400;
-  color: #FFFFFF;
+  color: var(--text);
   line-height: 1.6;
   font-size: 1.125rem;
 }
 
+
+/* Smeared watercolor-like backdrop, fixed so it doesn't repeat while scrolling */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 50% at 12% 18%, rgba(106, 127, 152, 0.55) 0%, transparent 70%),
+    radial-gradient(55% 45% at 88% 30%, rgba(185, 199, 214, 0.28) 0%, transparent 70%),
+    radial-gradient(70% 55% at 70% 90%, rgba(62, 82, 104, 0.7) 0%, transparent 70%),
+    radial-gradient(50% 40% at 20% 85%, rgba(140, 150, 175, 0.3) 0%, transparent 70%),
+    linear-gradient(160deg, var(--smoke-blue) 0%, var(--bg-base) 45%, var(--bg-deep) 100%);
+}
+
+/* Feathered edges so photos melt into the background instead of sitting in hard frames */
+.soft-photo {
+  -webkit-mask-image: radial-gradient(ellipse 75% 75% at center, #000 55%, transparent 100%);
+  mask-image: radial-gradient(ellipse 75% 75% at center, #000 55%, transparent 100%);
+}
 
 nav a {
   font-size: 1.125rem;
@@ -46,7 +80,7 @@ nav a {
   padding: 0;
   text-align: center;
   text-transform: none;
-  color: #000000;
+  color: #1f2833;
   letter-spacing: 0em;
   border: none;
   font-weight: 400;

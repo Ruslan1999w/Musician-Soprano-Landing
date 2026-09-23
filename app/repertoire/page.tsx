@@ -9,15 +9,11 @@ export default function () {
     return(
         <article>
             <div className={styles.wrapper}>
-                <div className={`${styles.section_photo} md:block hidden relative overflow-hidden`}>
+                <div className={`${styles.section_photo} md:block hidden relative soft-photo`}>
                     <Image
                         src={backgroundImage}
                         alt="Kristina Sokova"
                         className='object-cover min-w-[316]'
-                    />
-                    <div
-                        className='pointer-events-none absolute inset-0'
-                        style={{background: 'radial-gradient(ellipse at center, transparent 55%, #000000 100%)'}}
                     />
                 </div>
                 <div className='md:w-1/2 w-full flex justify-center flex-col mr-12 ml-12'>

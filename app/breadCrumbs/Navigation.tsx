@@ -31,7 +31,7 @@ export const Navigation = () => {
     const toggleNavMobile = () => setOpenNavMobile(!openNavMobile);
 
     const navMobile = openNavMobile && (
-        <section className='fixed z-[1000] top-0 bottom-0 left-0 right-0 h-full w-full bg-black p-0'>
+        <section className='fixed z-[1000] top-0 bottom-0 left-0 right-0 h-full w-full bg-[linear-gradient(160deg,#3e5268_0%,#1f2833_55%,#19212b_100%)] p-0'>
             <div className='h-full flex flex-col relative m-0 ml-auto'>
                 <button className='w-6 h-6 block border-none text-white fixed z-10 top-7 right-7 cursor-pointer'
                         onClick={() => setOpenNavMobile(false)}
@@ -91,7 +91,7 @@ export const Navigation = () => {
     return (
         <header className={`
         fixed w-full z-50 bg-transparent text-white pt-[2.5rem] px-[3rem] h-auto pb-[3rem] ml-auto mr-auto transition-all duration-150 ease-in-out
-        ${scrolled ? `${styles.scrolled} bg-white/50 ` : `${styles.not_scrolled}`}
+        ${scrolled ? `${styles.scrolled} bg-[#dde4ec]/60 backdrop-blur-md ` : `${styles.not_scrolled}`}
         `}>
             <div className={`container mx-auto flex justify-between items-center max-w-7xl w-full md:h-[60px]`}>
                 <div className={styles.logo}>

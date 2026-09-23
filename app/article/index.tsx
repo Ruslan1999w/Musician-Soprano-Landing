@@ -9,15 +9,11 @@ export const Article = () => {
       <>
           <section>
               <div className='flex relative flex-col w-full md:flex-row-reverse text-white mt-[150px] mb-[150px] gap-[60px]' id={'article'}>
-                  <div className='relative overflow-hidden'>
+                  <div className='relative soft-photo'>
                       <Image
                           src={backgroundImage}
                           alt="Kristina Sokova"
                           className='w-full h-auto object-cover max-h-[968px]'
-                      />
-                      <div
-                          className='pointer-events-none absolute inset-0'
-                          style={{background: 'radial-gradient(ellipse at center, transparent 55%, #000000 100%)'}}
                       />
                   </div>
                   <div className={` ${styles.article_text}

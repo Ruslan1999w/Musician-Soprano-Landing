@@ -32,4 +32,6 @@
   object-position: center;
   z-index: 0;
   opacity: 0.9;
+  -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
 }
