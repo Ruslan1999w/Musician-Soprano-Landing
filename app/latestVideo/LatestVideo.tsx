@@ -29,7 +29,7 @@ export function LatestVideo() {
                         src={mediaBackgroundSec}
                         alt="Посмотреть видео"
                         className={`aspect-square max-h-[900px] object-cover`}
-                        sizes="(max-width: 900px) 100vw, 900px"
+                        sizes="100vw"
                     />
                 </a>
             </div>

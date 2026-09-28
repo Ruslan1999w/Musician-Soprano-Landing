@@ -10,7 +10,7 @@ export const Article = () => {
   return(
       <>
           <section>
-              <Reveal className='flex relative flex-col w-full md:flex-row-reverse text-white mt-[150px] mb-[150px] gap-[60px]' id={'article'}>
+              <Reveal className='flex relative flex-col md:items-center w-full md:flex-row-reverse text-white mt-[150px] md:mt-[260px] mb-[150px] gap-[60px]' id={'article'}>
                   <div className='relative soft-photo'>
                       <Image
                           src={backgroundImage}

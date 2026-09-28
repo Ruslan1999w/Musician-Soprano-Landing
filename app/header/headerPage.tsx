@@ -70,7 +70,6 @@ export const HeaderPage = () => {
                 className={styles['page-header__image']}
                 sizes="100vw"
                 priority
-                placeholder="blur"
             />
             <div className={`${styles.page_title} ${styles.animated}`} ref={animatedElem}>
                 {logo[pathname as ValidPaths]?.title}

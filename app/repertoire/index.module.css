@@ -1,5 +1,6 @@
 .wrapper {
     display: flex;
+    align-items: flex-start;
     position: relative;
     width: 100%;
     color: white;
@@ -28,6 +29,9 @@
 }
 .section_photo {
     width: 50%;
+    aspect-ratio: 2 / 3;
+    position: sticky;
+    top: 120px;
 }
 .section_photo img {
     height: 100%;

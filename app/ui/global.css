@@ -25,7 +25,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 html {
-  font-size: clamp(16px, 0.26vw + 14.4px, 20px);
+  font-size: 16px;
 }
 
 /* Soft, blended palette taken from the photos: dusty blue, smoky slate, powder light */
@@ -70,8 +70,8 @@ body::before {
 
 /* Feathered edges so photos melt into the background instead of sitting in hard frames */
 .soft-photo {
-  -webkit-mask-image: radial-gradient(ellipse 68% 68% at center, #000 30%, transparent 92%);
-  mask-image: radial-gradient(ellipse 68% 68% at center, #000 30%, transparent 92%);
+  -webkit-mask-image: radial-gradient(ellipse farthest-side at center, #000 15%, transparent 100%);
+  mask-image: radial-gradient(ellipse farthest-side at center, #000 15%, transparent 100%);
 }
 
 nav a {
