@@ -70,8 +70,15 @@ body::before {
 
 /* Feathered edges so photos melt into the background instead of sitting in hard frames */
 .soft-photo {
-  -webkit-mask-image: radial-gradient(ellipse 75% 75% at center, #000 55%, transparent 100%);
-  mask-image: radial-gradient(ellipse 75% 75% at center, #000 55%, transparent 100%);
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  /* autoprefixer: ignore next */
+  mask-composite: intersect;
 }
 
 nav a {
