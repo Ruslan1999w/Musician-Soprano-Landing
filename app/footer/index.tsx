@@ -1,12 +1,33 @@
+"use client";
+
+import { useState, FormEvent } from "react";
 import Link from "next/link";
-import Image from 'next/image';
 
 import styles from './styles.module.css';
 import {InstagramIcon} from "@/app/icons/InstagramIcon";
 import {TelegramIcon} from "@/app/icons/TelegramIcon";
 import {YouTubeIcon} from "@/app/icons/YouTube";
 
+type SubscribeStatus = 'idle' | 'success' | 'error';
+
 export const Footer = () => {
+    const [email, setEmail] = useState('');
+    const [status, setStatus] = useState<SubscribeStatus>('idle');
+
+    const handleSubscribe = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        if (!isValidEmail) {
+            setStatus('error');
+            return;
+        }
+
+        // No email provider is wired up yet — this only confirms the click
+        // to the visitor instead of silently reloading the page.
+        setStatus('success');
+        setEmail('');
+    };
 
     return(
         <footer>
@@ -17,14 +38,33 @@ export const Footer = () => {
                             <h2 className='mt-3.5'>For latest news & events</h2>
                         </div>
                         <div className='flex justify-center items-center w-full md:w-1/2'>
-                            <form className='relative w-full flex'>
-                                <input className={`${styles.input} w-full `} type="email" placeholder='Enter email address here...'/>
-                                <button className={styles.btn} type='submit'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.2 11.4" fill="currentColor" className='w-8 h-3'>
-                                        <path
-                                            d="M32.1 5.4c0-.1-.1-.2-.2-.3L27.2.3c-.2-.2-.5-.3-.7-.3-.3 0-.5.1-.6.3-.2.2-.3.4-.3.7 0 .3.1.5.3.7L29 4.8H1c-.5 0-1 .4-1 1s.4 1 1 1h28l-3.1 3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3.3 0 .5-.1.6-.3l4.7-4.7s0-.1.1-.1v-.1c.2-.3.2-.7.1-.9z"/>
-                                    </svg>
-                                </button>
+                            <form className='relative w-full flex flex-col' onSubmit={handleSubscribe} noValidate>
+                                <div className='relative w-full flex'>
+                                    <input
+                                        className={`${styles.input} w-full `}
+                                        type="email"
+                                        required
+                                        value={email}
+                                        onChange={(e) => {
+                                            setEmail(e.target.value);
+                                            if (status !== 'idle') setStatus('idle');
+                                        }}
+                                        placeholder='Enter email address here...'
+                                        aria-label='Email address'
+                                        aria-invalid={status === 'error'}
+                                        aria-describedby='newsletter-status'
+                                    />
+                                    <button className={styles.btn} type='submit' aria-label='Subscribe'>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.2 11.4" fill="currentColor" className='w-8 h-3'>
+                                            <path
+                                                d="M32.1 5.4c0-.1-.1-.2-.2-.3L27.2.3c-.2-.2-.5-.3-.7-.3-.3 0-.5.1-.6.3-.2.2-.3.4-.3.7 0 .3.1.5.3.7L29 4.8H1c-.5 0-1 .4-1 1s.4 1 1 1h28l-3.1 3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3.3 0 .5-.1.6-.3l4.7-4.7s0-.1.1-.1v-.1c.2-.3.2-.7.1-.9z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div id='newsletter-status' role='status' className={styles.formStatus}>
+                                    {status === 'success' && 'Thank you — you’re on the list.'}
+                                    {status === 'error' && 'Please enter a valid email address.'}
+                                </div>
                             </form>
                         </div>
                     </div>

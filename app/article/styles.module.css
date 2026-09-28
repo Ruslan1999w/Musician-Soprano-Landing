@@ -17,10 +17,6 @@
     margin-top: 0;
 }
 
-.article_text .contest {
-    margin-top: 4rem;
-}
-
 .current_logo::before {
     content: url(../../public/arrow.svg);
     display: block;

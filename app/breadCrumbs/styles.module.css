@@ -23,10 +23,10 @@
 }
 
 .logo {
-    transition: opacity 150ms ease-in-out;
+    transition: opacity 150ms ease-in-out, color 150ms ease-in-out;
     border: none;
     display: block;
-    color: #1f2833;
+    color: inherit;
     font-family: "EB Garamond", serif;
     font-weight: 700;
     font-size: 2.1875rem;

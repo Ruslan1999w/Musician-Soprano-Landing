@@ -10,7 +10,14 @@ export default function ContactPage() {
                     <div className={styles.creator}>Artist</div>
                     <div className={styles.contacts}>
                         <h2>Kristina Sokova</h2>
-                        <p>Email: sokova.krist@gmail.com</p>
+                        <p>Email: <a href="mailto:sokova.krist@gmail.com">sokova.krist@gmail.com</a></p>
+                    </div>
+                </div>
+                <div className={styles.section_container}>
+                    <div className={styles.creator}>For Bookings</div>
+                    <div className={styles.contacts}>
+                        <h2>Concert & Opera Inquiries</h2>
+                        <p>Email: <a href="mailto:sokova.krist@gmail.com?subject=Booking%20Inquiry">sokova.krist@gmail.com</a></p>
                     </div>
                 </div>
                 <div className={styles.section_container}>

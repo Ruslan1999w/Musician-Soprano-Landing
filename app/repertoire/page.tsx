@@ -2,18 +2,20 @@ import Image from 'next/image';
 
 import styles from './index.module.css';
 import backgroundImage from "@/public/IMG_0183.jpg";
+import {Reveal} from "@/app/components/Reveal";
 
 export default function () {
     const textBox = 'm-4 whitespace-nowrap flex flex-col m-4 gap-4';
 
     return(
         <article>
-            <div className={styles.wrapper}>
+            <Reveal className={styles.wrapper}>
                 <div className={`${styles.section_photo} md:block hidden relative soft-photo`}>
                     <Image
                         src={backgroundImage}
                         alt="Kristina Sokova"
-                        className='object-cover min-w-[316]'
+                        className='object-cover object-top min-w-[316]'
+                        sizes="50vw"
                     />
                 </div>
                 <div className='md:w-1/2 w-full flex justify-center flex-col mr-12 ml-12'>
@@ -79,7 +81,7 @@ export default function () {
                     </div>
 
                 </div>
-            </div>
+            </Reveal>
         </article>
     )
 }

@@ -3,17 +3,20 @@ import Image from 'next/image';
 import styles from './styles.module.css';
 import backgroundImage from "@/public/photo_2025-06-16_16-42-15.jpg";
 import {LatestVideo} from "@/app/latestVideo/LatestVideo";
+import {Awards} from "@/app/awards/Awards";
+import {Reveal} from "@/app/components/Reveal";
 
 export const Article = () => {
   return(
       <>
           <section>
-              <div className='flex relative flex-col w-full md:flex-row-reverse text-white mt-[150px] mb-[150px] gap-[60px]' id={'article'}>
+              <Reveal className='flex relative flex-col w-full md:flex-row-reverse text-white mt-[150px] mb-[150px] gap-[60px]' id={'article'}>
                   <div className='relative soft-photo'>
                       <Image
                           src={backgroundImage}
                           alt="Kristina Sokova"
-                          className='w-full h-auto object-cover max-h-[968px]'
+                          className='w-full h-auto object-cover object-top max-h-[968px]'
+                          sizes="(max-width: 768px) 100vw, 50vw"
                       />
                   </div>
                   <div className={` ${styles.article_text}
@@ -44,17 +47,10 @@ export const Article = () => {
                           On May 18, 2025, she made her debut as Arsene in Johann Strauss’s <i>Der Zigeunerbaron</i> at the
                           Düsseldorf Tonhalle under the baton of conductor György Mészáros.
                       </p>
-                      <div className={styles.contest}>
-                      <p>
-                          05/24 – International Competition “Giovani Musicisti” in Treviso, 1st Prize
-                      </p>
-                      <p>
-                          05/23 – International Singing Competition Lav Mirski in Osijek, 2nd Prize
-                      </p>
-                      </div>
                   </div>
-              </div>
+              </Reveal>
           </section>
+          <Awards />
           <LatestVideo />
       </>
   );

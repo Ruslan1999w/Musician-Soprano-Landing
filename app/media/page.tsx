@@ -26,23 +26,24 @@ import galleryImageThirteen from "@/public/13.jpg";
 import galleryImageFourTeen from "@/public/14.jpeg";
 
 const galleryImage = [
-    { img: galleryImageOne, aspectRatio: "1:1" },
-    { img: galleryImageTwo, aspectRatio: "3:2" },
-    { img: galleryImageThree, aspectRatio: "17:12" },
-    { img: galleryImageFour, aspectRatio: "29:20" },
-    { img: galleryImageFive, aspectRatio: "3:2" },
-    { img: galleryImageSix, aspectRatio: "3:2" },
-    { img: galleryImageSeven, aspectRatio: "3:2" },
-    { img: galleryImageEight, aspectRatio: "3:2" },
-    { img: galleryImageNine, aspectRatio: "3:2" },
-    { img: galleryImageTen, aspectRatio: "3:2" },
-    { img: galleryImageEleven, aspectRatio: "3:2" },
-    { img: galleryImageTwelve, aspectRatio: "3:2" },
-    { img: galleryImageThirteen, aspectRatio: "3:2" },
-    { img: galleryImageFourTeen, aspectRatio: "3:2" },
+    { img: galleryImageOne, aspectRatio: "1:1", alt: "Kristina Sokova as Adele at the masquerade ball in Die Fledermaus, Landestheater Detmold" },
+    { img: galleryImageTwo, aspectRatio: "3:2", alt: "Kristina Sokova as Adele reading a note in Die Fledermaus, Landestheater Detmold" },
+    { img: galleryImageThree, aspectRatio: "17:12", alt: "Kristina Sokova with the ensemble in the ball scene of Die Fledermaus, Landestheater Detmold" },
+    { img: galleryImageFour, aspectRatio: "29:20", alt: "Kristina Sokova as Adele dancing in Die Fledermaus, Landestheater Detmold" },
+    { img: galleryImageFive, aspectRatio: "3:2", alt: "Kristina Sokova as Blonde confronting Osmin in Die Entführung aus dem Serail" },
+    { img: galleryImageSix, aspectRatio: "3:2", alt: "Kristina Sokova performing a song recital with piano accompaniment, Hochschule für Musik Detmold" },
+    { img: galleryImageSeven, aspectRatio: "3:2", alt: "Kristina Sokova as Galathée posed as a living statue in Die schöne Galathée, Sommertheater Detmold" },
+    { img: galleryImageEight, aspectRatio: "3:2", alt: "Kristina Sokova as Galathée drinking wine in Die schöne Galathée, Sommertheater Detmold" },
+    { img: galleryImageNine, aspectRatio: "3:2", alt: "Kristina Sokova performing a recital, Hochschule für Musik Detmold" },
+    { img: galleryImageTen, aspectRatio: "3:2", alt: "Kristina Sokova in a staged opera scene, Hochschule für Musik Detmold" },
+    { img: galleryImageEleven, aspectRatio: "3:2", alt: "Kristina Sokova as Blonde confronting Osmin in Die Entführung aus dem Serail" },
+    { img: galleryImageTwelve, aspectRatio: "3:2", alt: "Kristina Sokova in the title role of Lulu, Hochschule für Musik Weimar, 2024" },
+    { img: galleryImageThirteen, aspectRatio: "3:2", alt: "Kristina Sokova as Adele presenting a roast at the table in Die Fledermaus, Landestheater Detmold" },
+    { img: galleryImageFourTeen, aspectRatio: "3:2", alt: "Kristina Sokova as Galathée on her pedestal in Die schöne Galathée, Sommertheater Detmold" },
 ];
 
 const thumbUrl = (src: string) => `/_next/image?url=${encodeURIComponent(src)}&w=256&q=60`;
+const fullUrl = (src: string) => `/_next/image?url=${encodeURIComponent(src)}&w=3840&q=85`;
 
 export default function Media() {
     const lightGallerySettings = {
@@ -64,14 +65,14 @@ export default function Media() {
             >
                 {galleryImage.map((image, index) => (
                     <a
-                        href={image.img.src}
+                        href={fullUrl(image.img.src)}
                         data-thumb={thumbUrl(image.img.src)}
                         key={index}
                         className="block max-h-[1000px] max-w-[500px] h-auto w-auto overflow-hidden rounded-lg mb-10"
                         style={{ aspectRatio: image.aspectRatio }}
                     >
                         <Image
-                            alt="Repertoire image"
+                            alt={image.alt}
                             src={image.img}
                             className="object-cover w-full h-full"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"

@@ -1,0 +1,54 @@
+.awards {
+    width: 100%;
+    padding: 4rem 3rem;
+    border-top: 1px solid rgba(238, 241, 245, 0.15);
+    border-bottom: 1px solid rgba(238, 241, 245, 0.15);
+}
+
+.awardsInner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem 4rem;
+}
+
+.awardItem {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 420px;
+}
+
+.awardIcon {
+    flex-shrink: 0;
+    color: var(--powder, #b9c7d6);
+}
+
+.awardYear {
+    font-family: "EB Garamond", serif;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.awardText {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.awardPrize {
+    font-family: "EB Garamond", serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.awardName {
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
