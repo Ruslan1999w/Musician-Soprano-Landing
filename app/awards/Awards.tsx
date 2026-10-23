@@ -3,7 +3,19 @@ import { Reveal } from "@/app/components/Reveal";
 
 import styles from './styles.module.css';
 
-const awards = [
+type Award = {
+    year: string;
+    prize: string;
+    name: string;
+    place?: string;
+};
+
+const awards: Award[] = [
+    {
+        year: '2026',
+        prize: '2nd Prize',
+        name: 'Concorso Internazionale di Canto Lirico "Cloe Elmo"',
+    },
     {
         year: '2024',
         prize: '1st Prize',
@@ -23,12 +35,12 @@ export const Awards = () => {
         <section className={styles.awards}>
             <Reveal className={styles.awardsInner}>
                 {awards.map((award) => (
-                    <div className={styles.awardItem} key={`${award.year}-${award.place}`}>
+                    <div className={styles.awardItem} key={`${award.year}-${award.name}`}>
                         <LaurelIcon width="48" height="48" className={styles.awardIcon} />
                         <div className={styles.awardYear}>{award.year}</div>
                         <div className={styles.awardText}>
                             <div className={styles.awardPrize}>{award.prize}</div>
-                            <div className={styles.awardName}>{award.name}, {award.place}</div>
+                            <div className={styles.awardName}>{award.place ? `${award.name}, ${award.place}` : award.name}</div>
                         </div>
                     </div>
                 ))}

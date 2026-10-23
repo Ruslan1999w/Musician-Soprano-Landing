@@ -41,3 +41,9 @@
 .header_gap {
     gap: clamp(2rem, 5vw, 8rem);
 }
+
+/* Over the dark hero the nav needs light text; once scrolled it sits on the misty bar */
+.not_scrolled .logo,
+.not_scrolled nav a {
+    color: #eef1f5;
+}

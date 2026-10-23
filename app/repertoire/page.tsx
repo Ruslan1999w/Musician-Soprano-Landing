@@ -77,6 +77,16 @@ export default function () {
                                 <p>The Turn of  the Screw</p>
                                 <p>Miles</p>
                             </div>
+                            <div className={textBox}>
+                                <p>Giacomo Puccini</p>
+                                <p>La Bohème</p>
+                                <p>Musetta</p>
+                            </div>
+                            <div className={textBox}>
+                                <p>Giuseppe Verdi</p>
+                                <p>Un ballo in maschera</p>
+                                <p>Oscar</p>
+                            </div>
                         </div>
                     </div>
 
