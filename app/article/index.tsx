@@ -46,6 +46,9 @@ export const Article = () => {
                       </p>
                       <div className={styles.contest}>
                       <p>
+                          2026 – Concorso Internazionale di Canto Lirico “Cloe Elmo”, 2nd Prize
+                      </p>
+                      <p>
                           05/24 – International Competition “Giovani Musicisti” in Treviso, 1st Prize
                       </p>
                       <p>
